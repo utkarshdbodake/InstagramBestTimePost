@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body bgcolor="#E6E6FA">
+  <br>
+  <h1 align="center"> Instagram Project</h1>  <br>
+  <h3 align="center"> <small>Best Time to Post</small></h3> <br>
+  
+    <p align="center">
+    
+	    <form name="best_time_to_post" action="" method="GET">
+			  <p align="center">
+			     &nbsp;
+			    <input type="text"  class="form-control" id="user_id" name="user_id" placeholder="Instagram User ID">&nbsp;&nbsp;
+			    <button type="submit" class="btn btn-default" onclick="myFunction()">Get best time to post!</button>
+			    <br><br>
+			  </p>
+		</form>
+    </p>
+    
+<script>
+	function myFunction() {
+	    alert('u clicked me')
+	    
+	    $.get( "http://127.0.0.1:8000/find/best-time-to-post/", {"id": "311097588"} )
+	    .then(function( data ) {
+	      alert( data );
+	    });
+	    
+	    alert('Task Completed !!!')
+	}
+</script>
+
+</body>
+</html>
